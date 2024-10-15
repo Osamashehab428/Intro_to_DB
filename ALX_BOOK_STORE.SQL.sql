@@ -11,8 +11,7 @@ alter table Books add foreign key
 (author_id) references Authors(author_id);
 
 select * from Books;
-desc table books;
-desc table Authors;
+ 
 
 show create table books;
 
