@@ -26,7 +26,7 @@ CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 	CREATE TABLE Order_Details(
 	orderdetailedid INT PRIMARY KEY,
-	order_id INT, BOOK_ID INT , quantity DOUBLE);
+	order_id INT, BOOK_ID INT , quantity DOUBLE,FOREIGN KEY (order_id) REFERENCES Orders(order_id),FOREIGN KEY (book_id) REFERENCES Books(book_id));
 
  
 
