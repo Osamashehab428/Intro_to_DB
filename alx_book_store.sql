@@ -16,20 +16,19 @@ CREATE DATABASE IF NOT EXISTS alx_book_store;
 
  
 
-	CREATE TABLE CUSTOMERS(customer_id INT PRIMARY KEY,
+	CREATE TABLE Customers(customer_id INT PRIMARY KEY,
 	customer_name VARCHAR(215), email VARCHAR(215),
 	address TEXT);
 	 
-	CREATE TABLE ORDERS(
-	ORDER_ID INT PRIMARY KEY, CUSTOMER_ID INT,
-	ORDER_DATE DATE);
+	CREATE TABLE Orders(
+	order_id INT PRIMARY KEY, customer_id INT,
+	order_date DATE);
 
-	ALTER TABLE ORDERS ADD FOREIGN KEY 
-	(CUSTOMER_ID) REFERENCES CUSTOMERS(CUSTOMER_ID);
+ 
 
 	 
 
-	CREATE TABLE ORDER_DETAILS(
+	CREATE TABLE Order_Details(
 	orderdetailedid INT PRIMARY KEY,
 	order_id INT, BOOK_ID INT , quantity DOUBLE);
 
@@ -43,5 +42,4 @@ CREATE DATABASE IF NOT EXISTS alx_book_store;
 	(AUTHOR_ID) REFERENCES AUTHORS(AUTHOR_ID);
 	SELECT * FROM BOOKS;
 
-select * from books;
-select * from authors;
+ 
