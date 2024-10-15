@@ -14,7 +14,7 @@ CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 	CREATE TABLE Customers(customer_id INT PRIMARY KEY,
 	customer_name VARCHAR(215), email VARCHAR(215),
-	address TEXT);
+	address TEXT,FOREIGN KEY (customer_id) REFERENCES Customers(customer_id));
 	 
 	CREATE TABLE Orders(
 	order_id INT PRIMARY KEY, customer_id INT,
