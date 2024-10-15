@@ -1,45 +1,46 @@
 
-	create table Books(book_id int primary key,
-	title varchar(130),author_id int ,price double , publication_date date);
+	CREATE TABLE BOOKS(BOOK_ID INT PRIMARY KEY,
+	TITLE VARCHAR(130),AUTHOR_ID INT ,PRICE DOUBLE , PUBLICATION_DATE DATE);
 
-	create table Authors(author_id int primary key,
-	author_name varchar(215));
+	CREATE TABLE AUTHORS(AUTHOR_ID INT PRIMARY KEY,
+	AUTHOR_NAME VARCHAR(215));
 
-	select * from Authors; 
+	SELECT * FROM AUTHORS; 
 
-	alter table Books add foreign key 
-	(author_id) references Authors(author_id);
+	ALTER TABLE BOOKS ADD FOREIGN KEY 
+	(AUTHOR_ID) REFERENCES AUTHORS(AUTHOR_ID);
 
-	select * from Books;
+	SELECT * FROM BOOKS;
 	 
 
-	show create table books;
+	SHOW CREATE TABLE BOOKS;
 
-	create table Customers(customer_id int primary key,
-	customer_name varchar(215), email VARCHAR(215),
-	address Text);
+	CREATE TABLE CUSTOMERS(CUSTOMER_ID INT PRIMARY KEY,
+	CUSTOMER_NAME VARCHAR(215), EMAIL VARCHAR(215),
+	ADDRESS TEXT);
 	 
-	create table Orders(
-	order_id int primary key, customer_id int,
-	order_date date);
+	CREATE TABLE ORDERS(
+	ORDER_ID INT PRIMARY KEY, CUSTOMER_ID INT,
+	ORDER_DATE DATE);
 
-	alter table Orders add foreign key 
-	(customer_id) references Customers(customer_id);
+	ALTER TABLE ORDERS ADD FOREIGN KEY 
+	(CUSTOMER_ID) REFERENCES CUSTOMERS(CUSTOMER_ID);
 
 	 
 
-	create table Order_Details(
-	orderdetailid int primary key,
-	order_id int, book_id int , quantity double);
+	CREATE TABLE ORDER_DETAILS(
+	ORDERDETAILID INT PRIMARY KEY,
+	ORDER_ID INT, BOOK_ID INT , QUANTITY DOUBLE);
 
-	alter table Order_Details add foreign key (order_id)
-	references orders(order_id);
+	ALTER TABLE ORDER_DETAILS ADD FOREIGN KEY (ORDER_ID)
+	REFERENCES ORDERS(ORDER_ID);
 	 
-	alter table Order_Details add foreign key (book_id)
-	references Books(book_id);
+	ALTER TABLE ORDER_DETAILS ADD FOREIGN KEY (BOOK_ID)
+	REFERENCES BOOKS(BOOK_ID);
 
-	alter table Books add foreign key 
-	(author_id) references Authors(author_id);
-	select * from books;
+	ALTER TABLE BOOKS ADD FOREIGN KEY 
+	(AUTHOR_ID) REFERENCES AUTHORS(AUTHOR_ID);
+	SELECT * FROM BOOKS;
+
 
 
