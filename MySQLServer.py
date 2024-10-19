@@ -6,8 +6,6 @@ CREATE DATABASE IF NOT EXISTS alx_book_store;
   user="root@localhost",
   password="password"
 );
-DECLARE alx_book_store HANDLER
-   FOR condition_value
-   statement
-
  
+
+ except mysql.connector.Error
