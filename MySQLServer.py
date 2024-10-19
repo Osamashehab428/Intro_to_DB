@@ -1,18 +1,12 @@
+import mysql.connector;
 
-import mysql.connector
-
-alxbookstore = mysql.connector.connect(
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+alx_book_store = mysql.connector.connect(
   host="localhost",
-  user="root",
+  user="root@localhost",
   password="password"
-)
+);
 
-print(alxbookstore)
+ 
 
-if alxbookstore:print("Database 'alx_book_store' created successfully!")
-else:print("error")
-
-
-
-
-
+ 
