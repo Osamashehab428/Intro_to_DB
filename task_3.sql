@@ -1,4 +1,4 @@
- SHOW tables;
+ SHOW TABLES;
  
  
  
